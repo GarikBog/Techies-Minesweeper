@@ -8,7 +8,7 @@ class Cell {
 
 private:
 	// COORDS && SIZE
-	double x = 0, y = 0;
+	float x = 0, y = 0;
 	int size = 0;
 
 	//TEXTURE
@@ -29,11 +29,8 @@ public:
 	void set_pos(std::pair<double,double> new_coords);
 
 	void set_size(int size);
-
 	void set_texture_pos(std::pair<int, int> pos);
-
-	void set_texture_rectangle(sf::IntRect new_rect);
-	void set_texture(sf::Texture new_texture);
+	void set_texture(std::string new_texture);
 
 
 	//GETTERS
@@ -43,7 +40,7 @@ public:
 
 	int get_size() const;
 
-	int mines_near() const;
+	int get_mines_near() const;
 
 	
 	//TECH
@@ -54,7 +51,7 @@ public:
 
 
 	//OTHER
-	Cell(double x, double y, int size, sf::Texture texture);
+	Cell(double x, double y, int size, std::string texture_file);
 
 };
 

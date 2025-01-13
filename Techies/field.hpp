@@ -31,7 +31,7 @@ class Field {
 
 private:
 	// COORDS && SIZE
-	double sprite_x = 0, sprite_y = 0;
+	float sprite_x = 0, sprite_y = 0;
 	int sprite_size = 0,cell_size = 0;
 
 	//TEXTURE
@@ -69,8 +69,6 @@ public:
 
 	int get_size() const;
 
-
-	std::string get_texture() const;
 	int get_hidden_cells() const;
 	int get_hidden_mines() const;
 

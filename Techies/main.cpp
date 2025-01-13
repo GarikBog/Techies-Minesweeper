@@ -8,10 +8,14 @@
 #define CELL
 #endif // !CELL
 
+#ifndef FIELD
+#include"field.hpp"
+#define FIEDL
+#endif // !FIELD
 
 int main()
 {
-
+    Cell cell(100,100,50,"test");
 
 
     sf::RenderWindow window(sf::VideoMode(200, 200), "Techies");
@@ -26,6 +30,7 @@ int main()
         }
 
         window.clear();
+        cell.draw(window);
         window.display();
     }
 
