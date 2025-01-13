@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\programming\\cpp\\techies\\Techies\\",
+  "WorkspaceRootPath": "C:\\programming\\cpp\\Techies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\techies\\Techies\\Techies\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\cell.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\cell.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\field.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\field.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,13 +46,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "field.hpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\field.hpp",
+              "RelativeDocumentMoniker": "Techies\\field.hpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\field.hpp",
+              "RelativeToolTip": "Techies\\field.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-12T18:00:48.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "cell.hpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\cell.hpp",
+              "RelativeDocumentMoniker": "Techies\\cell.hpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\cell.hpp",
+              "RelativeToolTip": "Techies\\cell.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-12T17:02:00.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\programming\\cpp\\techies\\Techies\\Techies\\main.cpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\main.cpp",
               "RelativeDocumentMoniker": "Techies\\main.cpp",
-              "ToolTip": "C:\\programming\\cpp\\techies\\Techies\\Techies\\main.cpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\main.cpp",
               "RelativeToolTip": "Techies\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-12T16:22:14.581Z",
               "EditorCaption": ""
