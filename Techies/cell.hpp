@@ -14,6 +14,7 @@ private:
 	//TEXTURE
 	int texture_file_pos_x = 0;
 	int texture_file_pos_y = 0;
+	sf::Image image;
 	sf::Texture texture;
 	sf::Sprite sprite;
 

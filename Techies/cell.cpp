@@ -3,6 +3,8 @@
 #define CELL
 #endif // !CELL
 
+
+//SETTERS
 void Cell::set_pos(double new_x, double new_y)
 {
 	this->x = new_x;
@@ -40,6 +42,9 @@ void Cell::set_texture(std::string new_texture)
 	sprite.setTexture(texture);
 }
 
+
+
+//GETTERS
 std::pair<double, double> Cell::get_coords() const
 {
 	return {x,y};
@@ -65,6 +70,10 @@ int Cell::get_mines_near() const
 	return mines_near;
 }
 
+
+
+
+//TECH
 void Cell::new_mine_near()
 {
 	mines_near += 1;
@@ -80,6 +89,9 @@ void Cell::draw(sf::RenderWindow& window)
 	window.draw(sprite);
 }
 
+
+
+//OTHER
 Cell::Cell(double x, double y, int size, std::string texture_file)
 {
 	set_pos(x, y);

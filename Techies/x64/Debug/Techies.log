@@ -1,16 +1,4 @@
-﻿  cell.cpp
-C:\programming\cpp\Techies\Techies\cell.cpp(8,12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\programming\cpp\Techies\Techies\cell.cpp(9,12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\programming\cpp\Techies\Techies\cell.cpp(16,16): warning C4244: =: преобразование "_Ty1" в "float", возможна потеря данных
-C:\programming\cpp\Techies\Techies\cell.cpp(16,16): warning C4244:         with
-C:\programming\cpp\Techies\Techies\cell.cpp(16,16): warning C4244:         [
-C:\programming\cpp\Techies\Techies\cell.cpp(16,16): warning C4244:             _Ty1=double
-C:\programming\cpp\Techies\Techies\cell.cpp(16,16): warning C4244:         ]
-C:\programming\cpp\Techies\Techies\cell.cpp(16,38): warning C4244: =: преобразование "_Ty2" в "float", возможна потеря данных
-C:\programming\cpp\Techies\Techies\cell.cpp(16,38): warning C4244:         with
-C:\programming\cpp\Techies\Techies\cell.cpp(16,38): warning C4244:         [
-C:\programming\cpp\Techies\Techies\cell.cpp(16,38): warning C4244:             _Ty2=double
-C:\programming\cpp\Techies\Techies\cell.cpp(16,38): warning C4244:         ]
-  main.cpp
-  Создание кода...
+﻿  main.cpp
+C:\programming\cpp\Techies\Techies\main.cpp(78,57): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\programming\cpp\Techies\Techies\main.cpp(78,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   Techies.vcxproj -> C:\programming\cpp\Techies\x64\Debug\Techies.exe

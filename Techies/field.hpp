@@ -45,27 +45,27 @@ private:
 	
 	std::vector<std::vector<Cell>> cells;
 	
-	Cell& find_cell_under_mouse();
+	Cell& find_cell_under_mouse(sf::Vector2i mouse_pos);
 	bool open_cell(Cell& cell);
-	void save_open_cell(Cell& cell);
-
+	void safe_open_cell(Cell& cell);
+	void create_cells(int count, std::string texture);
 
 
 public:
 	//SETTERS
-	void set_sprite_coords(std::pair<double,double> coords);
-	void set_sprite_coords(double x,double y);
-	void set_sprite_x(double x);
-	void set_sprite_y(double y);
+	void set_sprite_coords(std::pair<float,float> coords);
+	void set_sprite_coords(float x, float y);
+	void set_sprite_x(float x);
+	void set_sprite_y(float y);
 
 	void set_sprite_size(int size);
 
 	void set_texture(std::string texture_file);
 
 	//GETTERS
-	std::pair<double, double> get_pos() const;
-	double get_x() const;
-	double get_y() const;
+	std::pair<float, float> get_pos() const;
+	float get_x() const;
+	float get_y() const;
 
 	int get_size() const;
 
@@ -82,7 +82,7 @@ public:
 	//OTHER
 
 
-	Field(std::pair<double, double> position, std::pair<int, int> size,
+	Field(std::pair<float, float> position, int size,
 		  std::string field_texture, std::string cell_texture, int level);
 
 

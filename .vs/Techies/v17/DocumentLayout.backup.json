@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -26,8 +30,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "field.cpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\field.cpp",
+              "RelativeDocumentMoniker": "Techies\\field.cpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\field.cpp",
+              "RelativeToolTip": "Techies\\field.cpp",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-14T16:24:55.416Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -50,39 +68,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "cell.cpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\cell.cpp",
               "RelativeDocumentMoniker": "Techies\\cell.cpp",
               "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\cell.cpp",
               "RelativeToolTip": "Techies\\cell.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-13T15:24:09.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "field.hpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\field.hpp",
               "RelativeDocumentMoniker": "Techies\\field.hpp",
               "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\field.hpp",
               "RelativeToolTip": "Techies\\field.hpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAEgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-12T18:00:48.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "cell.hpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\cell.hpp",
               "RelativeDocumentMoniker": "Techies\\cell.hpp",
               "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\cell.hpp",
               "RelativeToolTip": "Techies\\cell.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-12T17:02:00.061Z",
               "EditorCaption": ""
@@ -95,7 +113,7 @@
               "RelativeDocumentMoniker": "Techies\\main.cpp",
               "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\main.cpp",
               "RelativeToolTip": "Techies\\main.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-12T16:22:14.581Z",
               "EditorCaption": ""
