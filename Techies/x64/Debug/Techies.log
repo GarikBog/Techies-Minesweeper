@@ -1,4 +1,2 @@
-﻿  main.cpp
-C:\programming\cpp\Techies\Techies\main.cpp(78,57): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\programming\cpp\Techies\Techies\main.cpp(78,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+﻿  field.cpp
   Techies.vcxproj -> C:\programming\cpp\Techies\x64\Debug\Techies.exe

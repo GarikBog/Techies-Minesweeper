@@ -34,11 +34,9 @@ void Cell::set_texture_pos(std::pair<int, int> pos)
 	sprite.setTextureRect({ texture_file_pos_x ,texture_file_pos_y,size,size });
 }
 
-void Cell::set_texture(std::string new_texture)
+void Cell::set_texture(sf::Image image)
 {
-
-	if( !texture.loadFromFile("textures/cells" + new_texture)) texture.loadFromFile("textures/tech/error.jpg");
-
+	texture.loadFromImage(image);
 	sprite.setTexture(texture);
 }
 
@@ -79,6 +77,12 @@ void Cell::new_mine_near()
 	mines_near += 1;
 }
 
+void Cell::set_mine()
+{
+	mine = true;
+
+}
+
 bool Cell::is_mine()
 {
 	return mine;
@@ -92,11 +96,11 @@ void Cell::draw(sf::RenderWindow& window)
 
 
 //OTHER
-Cell::Cell(double x, double y, int size, std::string texture_file)
+Cell::Cell(double x, double y, int size, sf::Image image)
 {
 	set_pos(x, y);
 	set_size(size);
-	set_texture(texture_file);
+	set_texture(image);
 
 }
 

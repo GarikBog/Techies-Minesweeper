@@ -43,12 +43,12 @@ private:
 	int hidden_cells = 0;
 	int hidden_mines = 0;
 	
-	std::vector<std::vector<Cell>> cells;
+	std::vector<Cell*> cells;
 	
 	Cell& find_cell_under_mouse(sf::Vector2i mouse_pos);
 	bool open_cell(Cell& cell);
 	void safe_open_cell(Cell& cell);
-	void create_cells(int count, std::string texture);
+	void create_cells(int count);
 
 
 public:
@@ -82,8 +82,7 @@ public:
 	//OTHER
 
 
-	Field(std::pair<float, float> position, int size,
-		  std::string field_texture, std::string cell_texture, int level);
+	Field(std::pair<float, float> position, int size,std::string field_texture, int level);
 
 
 

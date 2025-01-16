@@ -4,6 +4,11 @@
 #define FIELD
 #endif // !FIELD
 
+#ifndef CTIME
+#include<ctime>
+#define CTIME
+#endif // !CTIME
+
 
 
 
@@ -93,34 +98,56 @@ int Field::get_hidden_mines() const
 void Field::draw(sf::RenderWindow& window)
 {
 	window.draw(sprite);
-	for(int i = 0;i<cells.size();++i)
-		for (int j = 0; j < cells.size(); ++j) {
-			cells[i][j].draw(window);
+	for(int i = 0;i<cells.size();++i){
+			cells[i]->draw(window);
 	}
 }
 
-void Field::create_cells(int count, std::string texture)
+void Field::set_mines(int count)
 {
-	cell_size = (sprite_size - sprite_size / 20) / count;
+	hidden_mines = count;
+
+	srand((unsigned)time(0));
+	int rand_cell;
+	while (count > 0) {
+		rand_cell = rand() % cells.size();
+
+		if (!cells[rand_cell]->is_mine()) {
+			cells[rand_cell]->set_mine();
+			--count;
+		}
+	}
+}
+
+void Field::create_cells(int count)
+{
+	hidden_cells = count * count;
+	cells.clear();
+	cells.reserve(count);
+	cell_size = (sprite_size - sprite_size / 50) / count;
 
 	sf::Image* image = new sf::Image;
-	image->create(cell_size, cell_size, { 145,145,145 });
+	image->create(cell_size, cell_size, sf::Color(70, 70, 70, 255));
 
-	for (int i = 0; i < cell_size; i++)
-		for (int j = 0; j < cell_size / std::max(cell_size, cell_size / 10); ++j) {
-			image->setPixel(i, j, { 255, 255, 255 });
+	for (int i = cell_size - 2; i > 0; --i)
+		for (int j = cell_size - i; j < cell_size - 2; ++j)
+		{
+			image->setPixel(cell_size - j, cell_size - 2 - i, { 200,200,200,255 });
 		}
-	for (int i = 0; i < cell_size / std::max(cell_size, cell_size / 10); i++)
-		for (int j = 0; j < cell_size; ++j) {
-			image->setPixel(i, j, { 255, 255, 255 });
+
+	for (int i = cell_size / 10; i < cell_size * 9 / 10; ++i)
+		for (int j = cell_size / 10; j < cell_size * 9 / 10; ++j)
+		{
+			image->setPixel(cell_size - j, cell_size - 2 - i, { 135, 135, 135,255 });
 		}
-	for (int i = cell_size - cell_size / std::max(cell_size, cell_size / 10); i < cell_size; i++)
-		for (int j = 0; j < cell_size - 1; ++j) {
-			image->setPixel(i, j, { 255, 255, 255 });
-		}
-	for (int i = 0; i < cell_size; i++)
-		for (int j = cell_size - cell_size / std::max(cell_size, cell_size / 10); j < cell_size; ++j) {
-			image->setPixel(i, j, { 255, 255, 255 });
+
+
+
+	for(int i = 0; i <count;++i)
+		for (int j = 0; j < count; ++j)
+		{
+			Cell* cell = new Cell(sprite_x + sprite_size / 100 + cell_size * i, sprite_y + sprite_size / 100 + cell_size * j,cell_size, *image);
+			cells.push_back(cell);
 		}
 
 
@@ -130,13 +157,13 @@ void Field::create_cells(int count, std::string texture)
 
 
 //OTHER
-Field::Field(std::pair<float, float> position, int size, std::string field_texture, std::string cell_texture, int level)
+Field::Field(std::pair<float, float> position, int size, std::string field_texture, int level)
 {
 	set_sprite_coords(position);
 	set_sprite_size(size);
 	set_texture(field_texture);
 
-
+	create_cells(level * 8);
 
 }
 

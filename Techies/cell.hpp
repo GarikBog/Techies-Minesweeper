@@ -31,7 +31,7 @@ public:
 
 	void set_size(int size);
 	void set_texture_pos(std::pair<int, int> pos);
-	void set_texture(std::string new_texture);
+	void set_texture(sf::Image image);
 
 
 	//GETTERS
@@ -46,13 +46,14 @@ public:
 	
 	//TECH
 	void new_mine_near();
+	void set_mine();
 	bool is_mine();
 	void draw(sf::RenderWindow& window);
 
 
 
 	//OTHER
-	Cell(double x, double y, int size, std::string texture_file);
+	Cell(double x, double y, int size, sf::Image image);
 
 };
 
