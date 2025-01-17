@@ -40,6 +40,7 @@ private:
 
 
 	//TECH
+	int cells_collums_count = 0;
 	int hidden_cells = 0;
 	int hidden_mines = 0;
 	
@@ -49,6 +50,7 @@ private:
 	bool open_cell(Cell& cell);
 	void safe_open_cell(Cell& cell);
 	void create_cells(int count);
+	void add_mine_count(int i, int j);
 
 
 public:

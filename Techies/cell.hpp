@@ -26,8 +26,8 @@ private:
 public:
 
 	//SETTERS
-	void set_pos(double new_x, double new_y);
-	void set_pos(std::pair<double,double> new_coords);
+	void set_pos(float new_x, float new_y);
+	void set_pos(std::pair<float, float> new_coords);
 
 	void set_size(int size);
 	void set_texture_pos(std::pair<int, int> pos);
@@ -35,7 +35,7 @@ public:
 
 
 	//GETTERS
-	std::pair<double, double> get_coords() const;
+	std::pair<float, float> get_coords() const;
 	double get_x() const;
 	double get_y() const;
 
@@ -53,7 +53,7 @@ public:
 
 
 	//OTHER
-	Cell(double x, double y, int size, sf::Image image);
+	Cell(float x, float y, int size, sf::Image image);
 
 };
 

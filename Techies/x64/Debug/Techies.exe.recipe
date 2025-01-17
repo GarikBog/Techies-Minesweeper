@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\programming\cpp\Techies\x64\Debug\Techies.exe</FullPath>
+      <FullPath>C:\cpp_projects\Techies-Minesweeper\x64\Debug\Techies.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

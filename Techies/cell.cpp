@@ -5,7 +5,7 @@
 
 
 //SETTERS
-void Cell::set_pos(double new_x, double new_y)
+void Cell::set_pos(float new_x, float new_y)
 {
 	this->x = new_x;
 	this->y = new_y;
@@ -13,7 +13,7 @@ void Cell::set_pos(double new_x, double new_y)
 	sprite.setPosition(x, y);
 }
 
-void Cell::set_pos(std::pair<double, double> new_coords)
+void Cell::set_pos(std::pair<float, float> new_coords)
 {
 	x = new_coords.first, y = new_coords.second;
 
@@ -43,7 +43,7 @@ void Cell::set_texture(sf::Image image)
 
 
 //GETTERS
-std::pair<double, double> Cell::get_coords() const
+std::pair<float, float> Cell::get_coords() const
 {
 	return {x,y};
 }
@@ -96,7 +96,7 @@ void Cell::draw(sf::RenderWindow& window)
 
 
 //OTHER
-Cell::Cell(double x, double y, int size, sf::Image image)
+Cell::Cell(float x, float y, int size, sf::Image image)
 {
 	set_pos(x, y);
 	set_size(size);

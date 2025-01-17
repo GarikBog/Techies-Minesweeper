@@ -1,2 +1,5 @@
 ﻿  field.cpp
-  Techies.vcxproj -> C:\programming\cpp\Techies\x64\Debug\Techies.exe
+C:\cpp_projects\Techies-Minesweeper\Techies\field.cpp(171,8): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\cpp_projects\Techies-Minesweeper\Techies\field.cpp(172,5): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\cpp_projects\Techies-Minesweeper\Techies\field.cpp(224,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  Techies.vcxproj -> C:\cpp_projects\Techies-Minesweeper\x64\Debug\Techies.exe
