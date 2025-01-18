@@ -1,5 +1,27 @@
-﻿  field.cpp
-C:\cpp_projects\Techies-Minesweeper\Techies\field.cpp(171,8): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\cpp_projects\Techies-Minesweeper\Techies\field.cpp(172,5): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\cpp_projects\Techies-Minesweeper\Techies\field.cpp(224,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+﻿  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\utility(247,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty1=float
+          ]
+C:\cpp_projects\Techies-Minesweeper\Techies\main.cpp(39,17): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=int,
+              _Other2=int
+          ]
+C:\cpp_projects\Techies-Minesweeper\Techies\main.cpp(39,11): message : см. первую ссылку на "std::pair<float,float>::pair" в "main"
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\utility(247,54): warning C4244: инициализация: преобразование "_Ty" в "_Ty2", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty2=float
+          ]
   Techies.vcxproj -> C:\cpp_projects\Techies-Minesweeper\x64\Debug\Techies.exe

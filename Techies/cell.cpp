@@ -4,6 +4,11 @@
 #endif // !CELL
 
 
+#ifndef IOSTREAM
+#include<iostream>
+#define IOSTREAM
+#endif // !IOSTREAM
+
 //SETTERS
 void Cell::set_pos(float new_x, float new_y)
 {
@@ -20,7 +25,15 @@ void Cell::set_pos(std::pair<float, float> new_coords)
 	sprite.setPosition(x, y);
 }
 
-void Cell::set_size(int size)
+void Cell::set_scale(float scale)
+{
+	sprite.setScale({
+		scale / sprite.getLocalBounds().width,
+		scale / sprite.getLocalBounds().height
+		});
+}
+
+void Cell::set_texture_size(int size)
 {
 	this->size = size;
 
@@ -34,10 +47,16 @@ void Cell::set_texture_pos(std::pair<int, int> pos)
 	sprite.setTextureRect({ texture_file_pos_x ,texture_file_pos_y,size,size });
 }
 
-void Cell::set_texture(sf::Image image)
+void Cell::set_texture(std::string texture)
 {
-	texture.loadFromImage(image);
-	sprite.setTexture(texture);
+	this->texture.loadFromFile("textures/cells/"+texture);
+	sprite.setTexture(this->texture);
+}
+
+bool Cell::set_flag()
+{
+	flag? flag = false : flag = true;
+	return flag;
 }
 
 
@@ -60,7 +79,7 @@ double Cell::get_y() const
 
 int Cell::get_size() const
 {
-	return size;
+	return sprite.getLocalBounds().width;
 }
 
 int Cell::get_mines_near() const
@@ -74,7 +93,18 @@ int Cell::get_mines_near() const
 //TECH
 void Cell::new_mine_near()
 {
+	
 	mines_near += 1;
+}
+
+void Cell::open_this_cell()
+{
+	this->open = true;
+}
+
+bool Cell::is_open()
+{
+	return open;
 }
 
 void Cell::set_mine()
@@ -88,6 +118,11 @@ bool Cell::is_mine()
 	return mine;
 }
 
+bool Cell::is_flag()
+{
+	return flag;
+}
+
 void Cell::draw(sf::RenderWindow& window)
 {
 	window.draw(sprite);
@@ -96,11 +131,12 @@ void Cell::draw(sf::RenderWindow& window)
 
 
 //OTHER
-Cell::Cell(float x, float y, int size, sf::Image image)
+Cell::Cell(float x, float y, int scale, std::string texture)
 {
 	set_pos(x, y);
-	set_size(size);
-	set_texture(image);
+	set_texture(texture);
+	set_texture_size(72);
+	set_scale(scale);
 
 }
 

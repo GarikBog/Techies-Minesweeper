@@ -47,10 +47,10 @@ private:
 	std::vector<Cell*> cells;
 	
 	Cell& find_cell_under_mouse(sf::Vector2i mouse_pos);
-	bool open_cell(Cell& cell);
+	bool open_cell(Cell& cell, bool flag);
 	void safe_open_cell(Cell& cell);
 	void create_cells(int count);
-	void add_mine_count(int i, int j);
+	void add_mine_count(int cell);
 
 
 public:
@@ -80,6 +80,7 @@ public:
 	void draw(sf::RenderWindow& window);
 	void set_mines(int count);
 	bool click(sf::Vector2i mouse_pos, bool flag);
+	void open_all_mines();
 
 	//OTHER
 

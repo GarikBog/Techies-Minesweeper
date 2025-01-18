@@ -114,22 +114,43 @@ void Field::set_mines(int count)
 
 	srand((unsigned)time(0));
 	int rand_cell;
+
 	while (count > 0) {
 		rand_cell = rand() % cells.size();
 
 
+
 		if (!cells[rand_cell]->is_mine()) {
-
-			cells[rand_cell]->set_mine();
-
-			int i = rand_cell / cells_collums_count,
-				j = rand_cell % cells_collums_count;
-
 			
-			std::cout << "\nMine set on: " << i << ' ' << j << "\nMore: " << count;
-			add_mine_count(i, j);
+			cells[rand_cell]->set_mine();
+			
+			std::cout << "\n\nMine set on: "<< rand_cell <<"\nMore: " << count;
+			add_mine_count(rand_cell);
 
 			--count;
+		}
+	}
+	
+}
+
+void Field::add_mine_count(int cell)
+{
+
+	int collums_min = bool(cell / cells_collums_count) * -1;
+	int collums_max = bool(cell / cells_collums_count != cells_collums_count - 1) * 1;
+	int line_min = bool(cell % cells_collums_count) * -1;
+	int line_max = bool(cell % cells_collums_count != cells_collums_count - 1) * 1;
+
+	int next_cell;
+
+	for (int j = collums_min; j <= collums_max; ++j)
+	{
+		for (int i = line_min; i <= line_max; ++i) {
+			next_cell = (cell + j * cells_collums_count + i);
+			if (next_cell >= 0 && next_cell < cells.size()) {
+				cells[next_cell]->new_mine_near();
+				std::cout << "\nNew Mine Near: " << next_cell;
+			}
 		}
 	}
 }
@@ -137,9 +158,9 @@ void Field::set_mines(int count)
 bool Field::click(sf::Vector2i mouse_pos, bool mouse_flag)
 {
 	float gabarite_x = sprite_x + sprite_size / 100,
-		gabarite_x_max = sprite_x + sprite_size / 100 + cell_size * cells_collums_count,
+		gabarite_x_max = sprite_x + sprite_size / 100 + cell_size * cells_collums_count - 1,
 		gabarite_y = sprite_y + sprite_size / 100,
-		gabarite_y_max = sprite_y + sprite_size/100  + cell_size * cells_collums_count;
+		gabarite_y_max = sprite_y + sprite_size/100  + cell_size * cells_collums_count - 1;
 
 	std::cout << "\n\nMouse_pos: " << mouse_pos.x << ' ' << mouse_pos.y
 		<< "\nGabatite_x: " << gabarite_x << ' ' << gabarite_x_max
@@ -158,10 +179,18 @@ bool Field::click(sf::Vector2i mouse_pos, bool mouse_flag)
 	std::cout << "\nCell_x_max: " << cell.get_x() + cell_size
 		<< "\nCell_y_max: " << cell.get_y() + cell_size;
 
-	open_cell(cell);
+	return open_cell(cell,mouse_flag);
 
+}
 
-	return !cell.is_mine();
+void Field::open_all_mines()
+{
+	for (Cell* cell : cells) {
+		if (cell->is_flag() && cell->is_mine()) {
+			cell->set_flag();
+		}
+		if (cell->is_mine()) open_cell(*cell, false);
+	}
 }
 
 Cell& Field::find_cell_under_mouse(sf::Vector2i mouse_pos)
@@ -173,19 +202,77 @@ Cell& Field::find_cell_under_mouse(sf::Vector2i mouse_pos)
 	
 	Cell& cell = *cells[i * cells_collums_count + j];
 	
+	std::cout << "\nFind cell:" << i * cells_collums_count + j;
 	
 	return cell;
 
 
 }
 
-bool Field::open_cell(Cell& cell)
+bool Field::open_cell(Cell& cell,bool flag)
 {
-	std::cout << "\nOPEN CELL\n";
+	if (cell.is_open()) return true;
+	if (flag) {
+		
+		if (cell.set_flag()) {
+			cell.set_texture_pos({ 792,0 });
+			--hidden_mines;
+		}
+		else {
+			cell.set_texture_pos({ 0,0 });
+			++hidden_mines;
+		}
+		std::cout <<'\n' << hidden_mines;
+		return true;
+	}
 
-	if (cell.is_mine()) std::cout << "MINE!";
-	else std::cout << cell.get_mines_near();
-	return false;
+	if (cell.is_flag()) return true;
+	if (cell.is_mine()) {
+
+		cell.set_texture_pos({ 72,0 });
+		return false;
+	}
+	else {
+		cell.set_texture_pos({ 72 * (cell.get_mines_near()+2),0 });
+		cell.open_this_cell();
+
+
+		if (!cell.get_mines_near()) {
+			int pos;
+			for (int i = 0; i < cells.size(); ++i) {
+				if (cells[i] == &cell) pos = i;
+			}
+			int collums_min = bool(pos / cells_collums_count) * -1,
+				collums_max = bool(pos / cells_collums_count != cells_collums_count-1) * 1,
+				line_min = bool(pos % cells_collums_count) * -1,
+				line_max = bool(pos % cells_collums_count != cells_collums_count-1) * 1;
+
+			int next_cell;
+			for (int j = collums_min; j <= collums_max; ++j)
+			{
+				for (int i = line_min; i <= line_max; ++i) {
+					next_cell = (pos + j * cells_collums_count + i);
+					if (next_cell >= 0 && next_cell < cells.size()) {
+						safe_open_cell(*cells[next_cell]);
+						std::cout << "\nSafe Open cell " << next_cell;
+					}
+				}
+			}
+		}
+		
+	}
+
+
+
+
+
+	return true;
+}
+
+void Field::safe_open_cell(Cell& cell)
+{
+	if (cell.is_mine()) return;
+	open_cell(cell, false);
 }
 
 void Field::create_cells(int count)
@@ -196,20 +283,8 @@ void Field::create_cells(int count)
 	cells.reserve(count);
 	cell_size = (sprite_size - sprite_size / 50) / count;
 
-	sf::Image* image = new sf::Image;
-	image->create(cell_size, cell_size, sf::Color(70, 70, 70, 255));
 
-	for (int i = cell_size - 2; i > 0; --i)
-		for (int j = cell_size - i; j < cell_size - 2; ++j)
-		{
-			image->setPixel(cell_size - j, cell_size - 2 - i, { 200,200,200,255 });
-		}
 
-	for (int i = cell_size / 10; i < cell_size * 9 / 10; ++i)
-		for (int j = cell_size / 10; j < cell_size * 9 / 10; ++j)
-		{
-			image->setPixel(cell_size - j, cell_size - 2 - i, { 135, 135, 135,255 });
-		}
 
 
 
@@ -217,52 +292,12 @@ void Field::create_cells(int count)
 		for (int j = 0; j < count; ++j)
 		{
 
-			Cell* cell = new Cell(sprite_x + sprite_size / 100 + cell_size * i, sprite_y + sprite_size / 100 + cell_size * j,cell_size, *image);
+			Cell* cell = new Cell(sprite_x + sprite_size / 100 + cell_size * i, sprite_y + sprite_size / 100 + cell_size * j, cell_size, "defolt.png");
 			cells.push_back(cell);
 		}
 
-	set_mines((count* count) * 0.15);
+	set_mines((count* count) * 0.20);
 
-}
-
-void Field::add_mine_count(int i, int j)
-{
-	int next_cell = (i - 1) * cells_collums_count + j - 1;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-
-	next_cell = (i - 1) * cells_collums_count + j;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-	next_cell = (i - 1) * cells_collums_count + j + 1;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-	next_cell = i  * cells_collums_count + j - 1;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-	next_cell = i * cells_collums_count + j;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-	next_cell = i * cells_collums_count + j + 1;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-	next_cell = (i + 1) * cells_collums_count + j - 1;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-	next_cell = (i + 1) * cells_collums_count + j - 1;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
-
-	next_cell = (i + 1) * cells_collums_count + j - 1;
-	if (next_cell > 0 && next_cell < cells.size())
-		cells[next_cell]->new_mine_near();
 }
 
 

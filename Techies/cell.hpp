@@ -22,6 +22,8 @@ private:
 	//TECH
 	int mines_near = 0;
 	bool mine = false;
+	bool open = false;
+	bool flag = false;
 
 public:
 
@@ -29,9 +31,12 @@ public:
 	void set_pos(float new_x, float new_y);
 	void set_pos(std::pair<float, float> new_coords);
 
-	void set_size(int size);
+	void set_scale(float scale);
+	void set_texture_size(int size);
 	void set_texture_pos(std::pair<int, int> pos);
-	void set_texture(sf::Image image);
+	void set_texture(std::string texture);
+	
+	bool set_flag();
 
 
 	//GETTERS
@@ -46,14 +51,18 @@ public:
 	
 	//TECH
 	void new_mine_near();
+	void open_this_cell();
 	void set_mine();
+	bool is_open();
 	bool is_mine();
+	bool is_flag();
 	void draw(sf::RenderWindow& window);
 
 
 
+
 	//OTHER
-	Cell(float x, float y, int size, sf::Image image);
+	Cell(float x, float y, int scale, std::string texture);
 
 };
 
