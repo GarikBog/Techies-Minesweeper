@@ -36,7 +36,7 @@ int main()
      //   targetSize.x / sprite.getLocalBounds().width,
     //    targetSize.y / sprite.getLocalBounds().height);
 
-    Field field({ 15,15 }, 900, "grid.png", 1);
+    Field field({ 15,15 }, 900, "grid.png", 3);
 
     sf::RenderWindow window(sf::VideoMode(window_size, window_size), "Techies");
 
@@ -47,15 +47,17 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-                sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
-                if (!field.click(mouse_pos, false)) field.open_all_mines();
+            if (event.type == sf::Event::MouseButtonReleased) {
+               if (event.mouseButton.button == sf::Mouse::Left){
+                    sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
+                    if (!field.click(mouse_pos, false)) field.open_all_mines();
+                }
+               else if (event.mouseButton.button == sf::Mouse::Right) {
+                   sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
+                   field.click(mouse_pos, true);
+               }
             }
-            else if (sf::Mouse::isButtonPressed(sf::Mouse::Right)) {
-                sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
-                field.click(mouse_pos, true);
 
-            }
         }
 
         //test.setPosition(100, 100);

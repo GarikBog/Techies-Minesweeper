@@ -157,10 +157,10 @@ void Field::add_mine_count(int cell)
 
 bool Field::click(sf::Vector2i mouse_pos, bool mouse_flag)
 {
-	float gabarite_x = sprite_x + sprite_size / 100,
-		gabarite_x_max = sprite_x + sprite_size / 100 + cell_size * cells_collums_count - 1,
-		gabarite_y = sprite_y + sprite_size / 100,
-		gabarite_y_max = sprite_y + sprite_size/100  + cell_size * cells_collums_count - 1;
+	float gabarite_x = sprite_x + sprite_size / 150,
+		gabarite_x_max = sprite_x + sprite_size / 150 + cell_size * cells_collums_count - 1,
+		gabarite_y = sprite_y + sprite_size / 150,
+		gabarite_y_max = sprite_y + sprite_size/150  + cell_size * cells_collums_count - 1;
 
 	std::cout << "\n\nMouse_pos: " << mouse_pos.x << ' ' << mouse_pos.y
 		<< "\nGabatite_x: " << gabarite_x << ' ' << gabarite_x_max
@@ -281,7 +281,7 @@ void Field::create_cells(int count)
 	hidden_cells = count * count;
 	cells.clear();
 	cells.reserve(count);
-	cell_size = (sprite_size - sprite_size / 50) / count;
+	cell_size = (sprite_size - sprite_size / 100) / count;
 
 
 
@@ -292,7 +292,7 @@ void Field::create_cells(int count)
 		for (int j = 0; j < count; ++j)
 		{
 
-			Cell* cell = new Cell(sprite_x + sprite_size / 100 + cell_size * i, sprite_y + sprite_size / 100 + cell_size * j, cell_size, "defolt.png");
+			Cell* cell = new Cell(sprite_x + sprite_size / 150 + cell_size * i, sprite_y + sprite_size / 150 + cell_size * j, cell_size, "defolt.png");
 			cells.push_back(cell);
 		}
 
