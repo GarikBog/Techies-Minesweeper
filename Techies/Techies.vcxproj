@@ -136,8 +136,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="buttons.hpp" />
     <ClInclude Include="cell.hpp" />
     <ClInclude Include="field.hpp" />
+    <ClInclude Include="objects.hpp" />
+    <ClInclude Include="techies_game.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

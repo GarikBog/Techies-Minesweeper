@@ -1,17 +1,25 @@
-#ifndef SFML_GRAPHICS
-#include <SFML/Graphics.hpp>
-#define SFML_GRAPHICS
-#endif // !SFML_GRAPHICS
 
 #ifndef CELL
 #include"cell.hpp"
 #define CELL
 #endif // !CELL
 
+#ifndef SFML_GRAPHICS
+#include <SFML/Graphics.hpp>
+#define SFML_GRAPHICS
+#endif // !SFML_GRAPHICS
+
 #ifndef FIELD
 #include"field.hpp"
 #define FIEDL
 #endif // !FIELD
+
+#ifndef BUTTONS
+#include"buttons.hpp"
+#define BUTTONS
+#endif // !BUTTONS
+
+
 
 
 #ifndef IOSTREAM
@@ -24,17 +32,10 @@ int main()
 {
     int window_size = 1000;
 
-
     sf::Sprite sprite;
-    sf::Texture texture;
-    texture.loadFromFile("textures/cells/defolt.png");
-    sprite.setTexture(texture);
-    sprite.setTextureRect({ 0,0,72,72 });
-    sf::Vector2f targetSize(500.0f, 500.0f); //целевой размер
 
-    //sprite.setScale(
-     //   targetSize.x / sprite.getLocalBounds().width,
-    //    targetSize.y / sprite.getLocalBounds().height);
+
+
 
     Field field({ 15,15 }, 900, "grid.png", 3);
 
