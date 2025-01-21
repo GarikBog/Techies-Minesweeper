@@ -3,7 +3,6 @@
 #define SFML_GRAPHICS
 #endif // !SFML_GRAPHICS
 
-
 class Object {
 
 private:
@@ -31,14 +30,14 @@ public:
 	void set_texture_rect(sf::IntRect rect);
 
 	//Getters
-	std::pair<float, float> get_pos;
-	float get_x();
-	float get_y();
-	sf::FloatRect get_collision();
+	std::pair<float, float> get_pos() const;
+	float get_x() const;
+	float get_y() const;
+	sf::FloatRect get_collision() const;
 
-	std::pair<int, int> get_scale();
-	int get_wight();
-	int get_height();
+	std::pair<int, int> get_scale() const;
+	int get_wight() const;
+	int get_height() const;
 
 
 	//Tech & other
@@ -50,3 +49,46 @@ public:
 
 
 };
+
+
+class ClickableObject : public Object {
+
+
+public:
+
+	bool click(sf::RenderWindow& window);
+
+	ClickableObject(std::pair<float, float> pos, std::pair<int, int> scale, std::string texture_file);
+};
+
+
+
+
+class TimerObject : Object {
+
+private:
+
+	unsigned int seconds = 0;
+	sf::Clock timer;
+	sf::Sprite left_cell, middle_cell,right_cell;
+
+
+public:
+
+	//Setters
+	void set_seconds(unsigned int seconds);
+
+	//Getters 
+	unsigned int get_seconds() const;
+
+	//Tech & other
+	void update();
+	void draw();
+
+	TimerObject(std::pair<float, float> pos, std::pair<int, int> scale, std::string texture_file);
+
+	TimerObject(std::pair<float, float> pos, std::pair<int, int> scale, std::string texture_file,unsigned int seconds);
+
+};
+
+

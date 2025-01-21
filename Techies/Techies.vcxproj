@@ -136,7 +136,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="buttons.hpp" />
     <ClInclude Include="cell.hpp" />
     <ClInclude Include="field.hpp" />
     <ClInclude Include="objects.hpp" />

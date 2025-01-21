@@ -296,7 +296,7 @@ void Field::create_cells(int count)
 			cells.push_back(cell);
 		}
 
-	set_mines((count* count) * 0.20);
+	set_mines((count* count) * 0.2);
 
 }
 

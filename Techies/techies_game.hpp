@@ -18,23 +18,6 @@
 
 
 
-class Button {
-private:
-	float x = 0, y = 0;
-	
-	int wight = 0, height = 0;
-
-
-	
-	sf::Texture texture;
-	sf::Sprite sprite;
-
-
-
-public:
-
-};
-
 
 
 
