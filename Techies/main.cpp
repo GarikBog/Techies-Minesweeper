@@ -14,13 +14,6 @@
 #define FIEDL
 #endif // !FIELD
 
-#ifndef BUTTONS
-#include"buttons.hpp"
-#define BUTTONS
-#endif // !BUTTONS
-
-
-
 
 #ifndef IOSTREAM
 #include<iostream>
@@ -33,11 +26,16 @@ int main()
     int window_size = 1000;
 
     sf::Sprite sprite;
+    sf::Texture texture;
+
+    texture.loadFromFile("textures/fields/ground.jpg");
+
+    sprite.setTexture(texture);
 
 
 
 
-    Field field({ 15,15 }, 900, "grid.png", 3);
+    //Field field({ 15,15 }, 900, "grid.png", 3);
 
     sf::RenderWindow window(sf::VideoMode(window_size, window_size), "Techies");
 
@@ -51,11 +49,11 @@ int main()
             if (event.type == sf::Event::MouseButtonReleased) {
                if (event.mouseButton.button == sf::Mouse::Left){
                     sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
-                    if (!field.click(mouse_pos, false)) field.open_all_mines();
+                    //if (!field.click(mouse_pos, false)) field.open_all_mines();
                 }
                else if (event.mouseButton.button == sf::Mouse::Right) {
                    sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
-                   field.click(mouse_pos, true);
+                   //field.click(mouse_pos, true);
                }
             }
 
@@ -64,8 +62,8 @@ int main()
         //test.setPosition(100, 100);
 
         window.clear();
-        //window.draw(sprite);
-        field.draw(window);
+        window.draw(sprite);
+        //field.draw(window);
 
         window.display();
     }

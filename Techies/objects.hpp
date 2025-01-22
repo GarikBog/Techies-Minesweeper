@@ -5,10 +5,10 @@
 
 class Object {
 
-private:
+protected:
 	//Pos & size
 	float x = 0, y = 0;
-	int wight = 0, height = 0;
+	int width = 0, height = 0;
 
 	sf::Texture texture;
 	sf::IntRect texture_rect;
@@ -22,8 +22,8 @@ public:
 	void set_y(float y);
 
 	void set_scale(std::pair<int, int> size);
-	void set_scale(int weight, int height);
-	void set_wight(int weight);
+	void set_scale(int width, int height);
+	void set_width(int width);
 	void set_height(int height);
 
 	void set_texture(std::string texture_file);
@@ -36,7 +36,7 @@ public:
 	sf::FloatRect get_collision() const;
 
 	std::pair<int, int> get_scale() const;
-	int get_wight() const;
+	int get_width() const;
 	int get_height() const;
 
 
@@ -64,11 +64,11 @@ public:
 
 
 
-class TimerObject : Object {
+class TimerObject : public Object {
 
 private:
 
-	unsigned int seconds = 0;
+	unsigned int seconds = 0,extra_time = 0;
 	sf::Clock timer;
 	sf::Sprite left_cell, middle_cell,right_cell;
 
@@ -76,18 +76,19 @@ private:
 public:
 
 	//Setters
-	void set_seconds(unsigned int seconds);
+	void set_seconds(unsigned int extra_time);
 
 	//Getters 
 	unsigned int get_seconds() const;
 
 	//Tech & other
+	void reset();
 	void update();
 	void draw();
 
 	TimerObject(std::pair<float, float> pos, std::pair<int, int> scale, std::string texture_file);
 
-	TimerObject(std::pair<float, float> pos, std::pair<int, int> scale, std::string texture_file,unsigned int seconds);
+	TimerObject(std::pair<float, float> pos, std::pair<int, int> scale, std::string texture_file,unsigned int extra_time);
 
 };
 

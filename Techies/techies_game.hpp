@@ -25,7 +25,7 @@ class Techies {
 
 
 private:
-	unsigned int window_wight = 0, window_height = 0;
+	unsigned int window_width = 0, window_height = 0;
 
 	std::string name;
 
