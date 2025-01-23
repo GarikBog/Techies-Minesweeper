@@ -20,19 +20,25 @@
 #define IOSTREAM
 #endif // !IOSTREAM
 
+#ifndef OBJECTS
+#include "objects.hpp"
+#define OBJECTS
+#endif // !OBJECTS
+
 
 int main()
 {
     int window_size = 1000;
 
-    sf::Sprite sprite;
-    sf::Texture texture;
+    //sf::Sprite sprite;
+    //sf::Texture texture;
 
-    texture.loadFromFile("textures/fields/ground.jpg");
+    //texture.loadFromFile("textures/fields/ground.jpg");
 
-    sprite.setTexture(texture);
+    //sprite.setTexture(texture);
 
-
+    TimerObject timer({ 50,50 }, {60,35},{60,35}, "counters/defolt.png",995);
+    timer.start();
 
 
     //Field field({ 15,15 }, 900, "grid.png", 3);
@@ -62,7 +68,9 @@ int main()
         //test.setPosition(100, 100);
 
         window.clear();
-        window.draw(sprite);
+        timer.update();
+        timer.draw(window);
+        //window.draw(sprite);
         //field.draw(window);
 
         window.display();
