@@ -421,7 +421,9 @@ TimerObject::TimerObject(std::pair<float, float> pos, std::pair<int, int> size, 
 // MinesCounterObject
 void MinesCounterObject::set_mines(unsigned int count)
 {
+	std::cout << "\nMines: " << count;
 	mines = count;
+	mine_change = true;
 }
 
 unsigned int MinesCounterObject::get_mines() const
@@ -431,12 +433,41 @@ unsigned int MinesCounterObject::get_mines() const
 
 void MinesCounterObject::add_mine()
 {
+	std::cout << "\nMine_Add\n";
 	++mines;
+	mine_change = true;
+	std::cout << "\nMines: " << mines;
 }
 
 void MinesCounterObject::remove_mine()
 {
-	if (mines > 0) --mines;
+	if (mines > 0) {
+		std::cout << "\nMine_Remove\n";
+
+		--mines;
+		mine_change = true;
+	}
+	std::cout << "\nMine_not_Remove\n";
+
+}
+
+void MinesCounterObject::update()
+{
+
+	if (mines > 998 || !mine_change) return;
+		std::cout << mine_change << '\t' << "CHANGE!\n";
+		mine_change = false;
+
+		right_cell.setTextureRect({ 60 + (mines % 10) * 20,0,20,35 });
+
+		if (mines < 10) return;
+
+		middle_cell.setTextureRect({ 60 + ((mines / 10) % 10) * 20,0,20,35 });
+
+		if (mines < 100) return;
+
+		left_cell.setTextureRect({ 60 + ((mines / 100) % 10) * 20,0,20,35 });
+
 
 }
 

@@ -136,7 +136,7 @@ class MinesCounterObject: public CounterObject {
 private:
 
 	unsigned int mines = 0;
-
+	bool mine_change = false;
 
 public:
 	

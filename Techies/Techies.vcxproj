@@ -135,6 +135,7 @@
     <ClCompile Include="field.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objects.cpp" />
+    <ClCompile Include="techies_game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cell.hpp" />

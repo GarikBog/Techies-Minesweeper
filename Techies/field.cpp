@@ -254,7 +254,6 @@ bool Field::open_cell(Cell& cell,bool flag)
 					next_cell = (pos + j * cells_collums_count + i);
 					if (next_cell >= 0 && next_cell < cells.size()) {
 						safe_open_cell(*cells[next_cell]);
-						std::cout << "\nSafe Open cell " << next_cell;
 					}
 				}
 			}
