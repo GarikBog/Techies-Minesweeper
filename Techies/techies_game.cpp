@@ -26,7 +26,7 @@ void Techies::start()
                 window->close();
             if (event.type == sf::Event::MouseButtonReleased) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
-
+					field->click(sf::Mouse::getPosition(*window), false);
                 }
                 else if (event.mouseButton.button == sf::Mouse::Right) {
 

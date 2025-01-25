@@ -35,6 +35,7 @@ private:
 	int sprite_size = 0,cell_size = 0;
 
 	//TEXTURE
+	float indent = 0;
 	sf::Texture texture;
 	sf::Sprite sprite;
 

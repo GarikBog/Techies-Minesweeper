@@ -124,7 +124,7 @@ void Field::set_mines(int count)
 			
 			cells[rand_cell]->set_mine();
 			
-			std::cout << "\n\nMine set on: "<< rand_cell <<"\nMore: " << count;
+			//std::cout << "\n\nMine set on: "<< rand_cell <<"\nMore: " << count;
 			add_mine_count(rand_cell);
 
 			--count;
@@ -149,7 +149,7 @@ void Field::add_mine_count(int cell)
 			next_cell = (cell + j * cells_collums_count + i);
 			if (next_cell >= 0 && next_cell < cells.size()) {
 				cells[next_cell]->new_mine_near();
-				std::cout << "\nNew Mine Near: " << next_cell;
+				//std::cout << "\nNew Mine Near: " << next_cell;
 			}
 		}
 	}
@@ -157,10 +157,10 @@ void Field::add_mine_count(int cell)
 
 bool Field::click(sf::Vector2i mouse_pos, bool mouse_flag)
 {
-	float gabarite_x = sprite_x + sprite_size / 150,
-		gabarite_x_max = sprite_x + sprite_size / 150 + cell_size * cells_collums_count - 1,
-		gabarite_y = sprite_y + sprite_size / 150,
-		gabarite_y_max = sprite_y + sprite_size/150  + cell_size * cells_collums_count - 1;
+	float gabarite_x = sprite_x + indent,
+		gabarite_x_max = sprite_x + indent + cell_size * cells_collums_count - 1,
+		gabarite_y = sprite_y + indent,
+		gabarite_y_max = sprite_y + indent  + cell_size * cells_collums_count - 1;
 
 	std::cout << "\n\nMouse_pos: " << mouse_pos.x << ' ' << mouse_pos.y
 		<< "\nGabatite_x: " << gabarite_x << ' ' << gabarite_x_max
@@ -197,8 +197,8 @@ Cell& Field::find_cell_under_mouse(sf::Vector2i mouse_pos)
 {
 
 
-	int i = (mouse_pos.x - sprite_x - sprite_size/100) / cell_size,
-		j =  (mouse_pos.y - sprite_y - sprite_size/100) / cell_size;
+	int i = (mouse_pos.x - sprite_x - indent - 1) / cell_size,
+		j =  (mouse_pos.y - sprite_y - indent - 1) / cell_size;
 	
 	Cell& cell = *cells[i * cells_collums_count + j];
 	
@@ -280,20 +280,17 @@ void Field::create_cells(int count)
 	hidden_cells = count * count;
 	cells.clear();
 	cells.reserve(count);
-	cell_size = (sprite_size - sprite_size / 100) / count;
-
-
-
-
+	cell_size = sprite_size  / count ;
+	indent = (sprite_size - cell_size * count)/2;
 
 
 	for(int i = 0; i <count;++i)
 		for (int j = 0; j < count; ++j)
 		{
-
-			Cell* cell = new Cell(sprite_x + sprite_size / 150 + cell_size * i, sprite_y + sprite_size / 150 + cell_size * j, cell_size, "defolt.png");
+			Cell* cell = new Cell( sprite_x  + indent  +  cell_size * i , sprite_y + indent  + cell_size * j, cell_size  , "defolt.png");
 			cells.push_back(cell);
 		}
+
 
 	set_mines((count* count) * 0.2);
 

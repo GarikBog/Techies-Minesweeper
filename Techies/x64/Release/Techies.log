@@ -1,0 +1,18 @@
+﻿  cell.cpp
+  field.cpp
+  main.cpp
+C:\programming\cpp\Techies\Techies\cell.hpp(2,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  (компиляция исходного файла "cell.cpp")
+  
+C:\programming\cpp\Techies\Techies\field.hpp(2,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  (компиляция исходного файла "field.cpp")
+  
+C:\programming\cpp\Techies\Techies\main.cpp(3,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  objects.cpp
+C:\programming\cpp\Techies\Techies\objects.hpp(2,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  (компиляция исходного файла "objects.cpp")
+  
+  techies_game.cpp
+C:\programming\cpp\Techies\Techies\techies_game.hpp(2,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  (компиляция исходного файла "techies_game.cpp")
+  
