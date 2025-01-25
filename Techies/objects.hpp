@@ -10,6 +10,8 @@ protected:
 	float x = 0, y = 0;
 	int width = 0, height = 0;
 
+
+	std::string texture_file;
 	sf::Texture texture;
 	sf::IntRect texture_rect;
 	sf::Sprite sprite;
@@ -33,6 +35,7 @@ public:
 	void set_texture_rect(sf::IntRect rect);
 
 	//Getters
+	std::string get_texture() const;
 	std::pair<float, float> get_pos() const;
 	float get_x() const;
 	float get_y() const;
@@ -123,6 +126,7 @@ public:
 	//Tech & Other
 	void reset();
 	void start();
+	void stop();
 	void update();
 	
 	TimerObject (std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file);
@@ -135,7 +139,7 @@ public:
 class MinesCounterObject: public CounterObject {
 private:
 
-	unsigned int mines = 0;
+	int mines = 0;
 	bool mine_change = false;
 
 public:
@@ -146,11 +150,12 @@ public:
 	void set_mines(unsigned int count);
 
 	//Getters
-	unsigned int get_mines() const;
+	int get_mines() const;
 
 	//Tech
 	void add_mine();
 	void remove_mine();
+	void reset();
 	void update();
 
 

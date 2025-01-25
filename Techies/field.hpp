@@ -43,6 +43,7 @@ private:
 	//TECH
 	int cells_collums_count = 0;
 	int hidden_cells = 0;
+	int total_cells = 0;
 	int hidden_mines = 0;
 	
 	std::vector<Cell*> cells;
@@ -73,6 +74,7 @@ public:
 	int get_size() const;
 
 	int get_hidden_cells() const;
+	int get_total_cells() const;
 	int get_hidden_mines() const;
 
 
@@ -82,6 +84,7 @@ public:
 	void set_mines(int count);
 	bool click(sf::Vector2i mouse_pos, bool flag);
 	void open_all_mines();
+	void reset(int difficulty);
 
 	//OTHER
 

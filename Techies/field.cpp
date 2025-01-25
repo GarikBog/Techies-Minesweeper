@@ -93,6 +93,11 @@ int Field::get_hidden_cells() const
 	return hidden_cells;
 }
 
+int Field::get_total_cells() const
+{
+	return total_cells;
+}
+
 int Field::get_hidden_mines() const
 {
 	return hidden_mines;
@@ -162,22 +167,22 @@ bool Field::click(sf::Vector2i mouse_pos, bool mouse_flag)
 		gabarite_y = sprite_y + indent,
 		gabarite_y_max = sprite_y + indent  + cell_size * cells_collums_count - 1;
 
-	std::cout << "\n\nMouse_pos: " << mouse_pos.x << ' ' << mouse_pos.y
-		<< "\nGabatite_x: " << gabarite_x << ' ' << gabarite_x_max
-		<< "\nGabarite_y: " << gabarite_y << ' ' << gabarite_y_max;
+	//std::cout << "\n\nMouse_pos: " << mouse_pos.x << ' ' << mouse_pos.y
+	//	<< "\nGabatite_x: " << gabarite_x << ' ' << gabarite_x_max
+	//	<< "\nGabarite_y: " << gabarite_y << ' ' << gabarite_y_max;
 
 	if (mouse_pos.x < gabarite_x
 		|| mouse_pos.y < gabarite_y
 		|| mouse_pos.x > gabarite_x_max
 		|| mouse_pos.y > gabarite_y_max){
-		std::cout << "\nRETURN ";
+		//std::cout << "\nRETURN ";
 		return true;
 	}
 
 	Cell& cell = find_cell_under_mouse(mouse_pos);
 
-	std::cout << "\nCell_x_max: " << cell.get_x() + cell_size
-		<< "\nCell_y_max: " << cell.get_y() + cell_size;
+	//std::cout << "\nCell_x_max: " << cell.get_x() + cell_size
+	//	<< "\nCell_y_max: " << cell.get_y() + cell_size;
 
 	return open_cell(cell,mouse_flag);
 
@@ -193,6 +198,11 @@ void Field::open_all_mines()
 	}
 }
 
+void Field::reset(int difficulty)
+{
+	create_cells(difficulty * 8);
+}
+
 Cell& Field::find_cell_under_mouse(sf::Vector2i mouse_pos)
 {
 
@@ -202,7 +212,7 @@ Cell& Field::find_cell_under_mouse(sf::Vector2i mouse_pos)
 	
 	Cell& cell = *cells[i * cells_collums_count + j];
 	
-	std::cout << "\nFind cell:" << i * cells_collums_count + j;
+	//std::cout << "\nFind cell:" << i * cells_collums_count + j;
 	
 	return cell;
 
@@ -212,6 +222,7 @@ Cell& Field::find_cell_under_mouse(sf::Vector2i mouse_pos)
 bool Field::open_cell(Cell& cell,bool flag)
 {
 	if (cell.is_open()) return true;
+
 	if (flag) {
 		
 		if (cell.set_flag()) {
@@ -221,12 +232,14 @@ bool Field::open_cell(Cell& cell,bool flag)
 		else {
 			cell.set_texture_pos({ 0,0 });
 			++hidden_mines;
+
 		}
-		std::cout <<'\n' << hidden_mines;
+		//std::cout <<'\n' << hidden_mines;
 		return true;
 	}
 
 	if (cell.is_flag()) return true;
+	
 	if (cell.is_mine()) {
 
 		cell.set_texture_pos({ 72,0 });
@@ -235,6 +248,8 @@ bool Field::open_cell(Cell& cell,bool flag)
 	else {
 		cell.set_texture_pos({ 72 * (cell.get_mines_near()+2),0 });
 		cell.open_this_cell();
+		--hidden_cells;
+
 
 
 		if (!cell.get_mines_near()) {
@@ -261,10 +276,6 @@ bool Field::open_cell(Cell& cell,bool flag)
 		
 	}
 
-
-
-
-
 	return true;
 }
 
@@ -276,9 +287,11 @@ void Field::safe_open_cell(Cell& cell)
 
 void Field::create_cells(int count)
 {
-	cells_collums_count = count;
-	hidden_cells = count * count;
+	for (int i = 0; i < cells.size(); ++i) delete cells[i];
 	cells.clear();
+	cells_collums_count = count;
+	total_cells = count * count;
+	hidden_cells = total_cells - total_cells * 0.2 + 1;
 	cells.reserve(count);
 	cell_size = sprite_size  / count ;
 	indent = (sprite_size - cell_size * count)/2;
@@ -292,7 +305,7 @@ void Field::create_cells(int count)
 		}
 
 
-	set_mines((count* count) * 0.2);
+	set_mines((total_cells) * 0.2);
 
 }
 

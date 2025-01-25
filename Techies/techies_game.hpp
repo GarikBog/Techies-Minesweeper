@@ -30,18 +30,22 @@ class Techies {
 
 
 private:
-	unsigned int window_width = 0, window_height = 0, complexity = 2;
-	
+	unsigned int window_width = 0, window_height = 0;
+	int difficulty = 1;
+	bool end = false,run = false;
 	std::string name = "Techies";
 	sf::RenderWindow* window;
 	Field* field;
 	TimerObject* timer;
 	MinesCounterObject* mine_counter;
-	ClickableObject *complexity_button;
+	ClickableObject *difficulty_button;
 	Object* background;
 
 	std::vector<Object*> tmp_objects;
+	std::vector<ClickableObject*> tmp_buttons;
 	void draw();
+
+	void restart();
 
 public:
 

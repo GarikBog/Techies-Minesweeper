@@ -87,9 +87,11 @@ void Object::set_height(int height)
 }
 
 void Object::set_texture(std::string texture_file)
-{
+{	
+	this->texture_file = texture_file;
 	if (!texture.loadFromFile("textures/objects/" + texture_file)) {
 		texture.loadFromFile("textures/tech/error.jpg");
+		this->texture_file = "textures/tech/error.jpg";
 	}
 	
 	sprite.setTexture(texture);
@@ -99,6 +101,11 @@ void Object::set_texture_rect(sf::IntRect rect)
 {
 
 	sprite.setTextureRect(rect);
+}
+
+std::string Object::get_texture() const
+{
+	return texture_file;
 }
 
 std::pair<float, float> Object::get_pos() const
@@ -158,13 +165,13 @@ Object::Object(std::pair<float, float> pos,std::pair<int,int> size, std::pair<in
 //ClickableObject
 bool ClickableObject::click(sf::RenderWindow& window)
 {
-	sf::Vector2i mouse_pos = sf::Mouse::getPosition();
-	
+	sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
+
 	return (
 		mouse_pos.x > x &&
 		mouse_pos.x < x + sprite.getGlobalBounds().width &&
 		mouse_pos.y > y &&
-		mouse_pos.y > y + sprite.getGlobalBounds().height
+		mouse_pos.y < y + sprite.getGlobalBounds().height
 		);
 }
 
@@ -341,7 +348,7 @@ void CounterObject::set_texture_rect(sf::IntRect rect)
 
 void CounterObject::draw(sf::RenderWindow& window) 
 {
-	//Object::draw(window);
+	Object::draw(window);
 	window.draw(left_cell);
 	window.draw(middle_cell);
 	window.draw(right_cell);
@@ -379,10 +386,19 @@ void TimerObject::reset()
 	extra_time = 0;
 	seconds = 0;
 	timer.restart();
+	update();
+	right_cell.setTextureRect({ 60 ,0,20,35 });
+	middle_cell.setTextureRect({ 60 ,0,20,35 });
+	left_cell.setTextureRect({ 60 ,0,20,35 });
 }
 void TimerObject::start()
 {
 	run = true;
+}
+
+void TimerObject::stop()
+{
+	run = false;
 }
 
 void TimerObject::update()
@@ -390,8 +406,8 @@ void TimerObject::update()
 
 	if (seconds > 998 || !run ) return;
 
-	if (seconds != int(timer.getElapsedTime().asSeconds()) + extra_time) {
-		std::cout <<seconds<<'\t' << "UPDATED!\n";
+	if ( seconds != int(timer.getElapsedTime().asSeconds()) + extra_time) {
+		//std::cout <<seconds<<'\t' << "UPDATED!\n";
 		seconds = int(timer.getElapsedTime().asSeconds()) + extra_time;
 
 		right_cell.setTextureRect({ 60 + (seconds % 10) * 20,0,20,35 });
@@ -421,50 +437,56 @@ TimerObject::TimerObject(std::pair<float, float> pos, std::pair<int, int> size, 
 // MinesCounterObject
 void MinesCounterObject::set_mines(unsigned int count)
 {
-	std::cout << "\nMines: " << count;
+	//std::cout << "\nMines: " << count;
 	mines = count;
 	mine_change = true;
 }
 
-unsigned int MinesCounterObject::get_mines() const
+int MinesCounterObject::get_mines() const
 {
 	return mines;
 }
 
 void MinesCounterObject::add_mine()
 {
-	std::cout << "\nMine_Add\n";
+	//std::cout << "\nMine_Add\n";
 	++mines;
 	mine_change = true;
-	std::cout << "\nMines: " << mines;
+	//std::cout << "\nMines: " << mines;
 }
 
 void MinesCounterObject::remove_mine()
 {
-	if (mines > 0) {
-		std::cout << "\nMine_Remove\n";
 
-		--mines;
-		mine_change = true;
-	}
-	std::cout << "\nMine_not_Remove\n";
+	--mines;
+	mine_change = true;
 
+	//std::cout << "\nMine_Remove\n";
+
+}
+
+void MinesCounterObject::reset()
+{
+	mines = 0;
+	right_cell.setTextureRect({ 60 ,0,20,35 });
+	middle_cell.setTextureRect({ 60 ,0,20,35 });
+	left_cell.setTextureRect({ 60 ,0,20,35 });
 }
 
 void MinesCounterObject::update()
 {
 
-	if (mines > 998 || !mine_change) return;
-		std::cout << mine_change << '\t' << "CHANGE!\n";
+	if (mines > 998 || !mine_change || mines<0) return;
+		//std::cout << mine_change << '\t' << "CHANGE!\n";
 		mine_change = false;
 
 		right_cell.setTextureRect({ 60 + (mines % 10) * 20,0,20,35 });
 
-		if (mines < 10) return;
+		if (mines < 9) return;
 
 		middle_cell.setTextureRect({ 60 + ((mines / 10) % 10) * 20,0,20,35 });
 
-		if (mines < 100) return;
+		if (mines < 99) return;
 
 		left_cell.setTextureRect({ 60 + ((mines / 100) % 10) * 20,0,20,35 });
 
