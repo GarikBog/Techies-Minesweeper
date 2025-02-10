@@ -19,11 +19,10 @@
 int main()
 {
 
-    Techies techies(480);
+    Techies techies(1750);
 
     techies.start();
 
- 
 
     return 0;
 

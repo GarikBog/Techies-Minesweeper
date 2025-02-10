@@ -1,9 +1,4 @@
-﻿  field.cpp
-C:\programming\cpp\Techies\Techies\field.cpp(210,8): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\programming\cpp\Techies\Techies\field.cpp(211,5): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\programming\cpp\Techies\Techies\field.cpp(294,49): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\programming\cpp\Techies\Techies\field.cpp(297,44): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\programming\cpp\Techies\Techies\field.cpp(308,26): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+﻿  game.cpp
   main.cpp
   techies_game.cpp
 C:\programming\cpp\Techies\Techies\techies_game.cpp(170,24): warning C4244: =: преобразование "double" в "unsigned int", возможна потеря данных

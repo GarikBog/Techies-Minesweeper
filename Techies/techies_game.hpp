@@ -22,24 +22,24 @@
 #endif // !OBJECTS
 
 
+#ifndef GAME
+#include "game.hpp"
+#define GAME
+#endif // !GAME
 
 
 
-
-class Techies {
+class Techies: Game{
 
 
 private:
-	unsigned int window_width = 0, window_height = 0;
 	int difficulty = 1;
 	bool end = false,run = false;
 	std::string name = "Techies";
-	sf::RenderWindow* window;
 	Field* field;
 	TimerObject* timer;
 	MinesCounterObject* mine_counter;
 	ClickableObject *difficulty_button;
-	Object* background;
 
 	std::vector<Object*> tmp_objects;
 	std::vector<ClickableObject*> tmp_buttons;
@@ -49,7 +49,7 @@ private:
 
 public:
 
-	void start();
+	void start() override;
 
 
 	Techies(unsigned int height);
