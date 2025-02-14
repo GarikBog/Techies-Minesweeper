@@ -131,19 +131,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cell.cpp" />
-    <ClCompile Include="field.cpp" />
+    <ClCompile Include="mine_cell.cpp" />
+    <ClCompile Include="mine_field.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objects.cpp" />
-    <ClCompile Include="techies_game.cpp" />
+    <ClCompile Include="techies.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cell.hpp" />
-    <ClInclude Include="field.hpp" />
+    <ClInclude Include="mine_cell.hpp" />
+    <ClInclude Include="mine_field.hpp" />
     <ClInclude Include="game.hpp" />
     <ClInclude Include="objects.hpp" />
-    <ClInclude Include="techies_game.hpp" />
+    <ClInclude Include="techies.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll" />

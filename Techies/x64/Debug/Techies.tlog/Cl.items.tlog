@@ -1,6 +1,6 @@
-C:\programming\cpp\Techies\Techies\cell.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\cell.obj
-C:\programming\cpp\Techies\Techies\field.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\field.obj
+C:\programming\cpp\Techies\Techies\mine_cell.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\mine_cell.obj
+C:\programming\cpp\Techies\Techies\mine_field.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\mine_field.obj
 C:\programming\cpp\Techies\Techies\game.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\game.obj
 C:\programming\cpp\Techies\Techies\main.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\main.obj
 C:\programming\cpp\Techies\Techies\objects.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\objects.obj
-C:\programming\cpp\Techies\Techies\techies_game.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\techies_game.obj
+C:\programming\cpp\Techies\Techies\techies.cpp;C:\programming\cpp\Techies\Techies\x64\Debug\techies.obj

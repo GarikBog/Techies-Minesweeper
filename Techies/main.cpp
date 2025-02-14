@@ -11,7 +11,7 @@
 #endif // !IOSTREAM
 
 #ifndef TECHIES_GAME
-#include "techies_game.hpp"
+#include "techies.hpp"
 #define TECHIES_GAME
 #endif // !TECHIES_GAME
 
