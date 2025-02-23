@@ -1,8 +1,114 @@
-﻿  mine_cell.cpp
-C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244: return: преобразование "T" в "int", возможна потеря данных
-C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:         with
-C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:         [
-C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:             T=float
-C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:         ]
-C:\programming\cpp\Techies\Techies\mine_cell.cpp(139,12): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-  Techies.vcxproj -> C:\programming\cpp\Techies\x64\Debug\Techies.exe
+﻿  main.cpp
+  techies.cpp
+C:\programming\cpp\Techies\Techies\techies.cpp(182,24): warning C4244: =: преобразование "double" в "unsigned int", возможна потеря данных
+C:\programming\cpp\Techies\Techies\techies.cpp(184,77): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:             _Ty=double
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:             _Ty1=float
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         ]
+  (компиляция исходного файла "techies.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\programming\cpp\Techies\Techies\techies.cpp(184,20):
+          выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<float,float>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=double,
+              _Other2=double
+          ]
+              C:\programming\cpp\Techies\Techies\techies.cpp(184,8):
+              см. первую ссылку на std::pair<float,float>::pair "Techies::Techies"
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244: инициализация: преобразование "_Ty" в "_Ty2", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:             _Ty=double
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:             _Ty2=float
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         ]
+  (компиляция исходного файла "techies.cpp")
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:             _Ty1=float
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         ]
+  (компиляция исходного файла "techies.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\programming\cpp\Techies\Techies\techies.cpp(188,3):
+          выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=int,
+              _Other2=int
+          ]
+              C:\programming\cpp\Techies\Techies\techies.cpp(187,13):
+              см. первую ссылку на std::pair<float,float>::pair "Techies::Techies"
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244: инициализация: преобразование "_Ty" в "_Ty2", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:             _Ty2=float
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         ]
+  (компиляция исходного файла "techies.cpp")
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:             _Ty=double
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:             _Ty1=int
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16): warning C4244:         ]
+  (компиляция исходного файла "techies.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,16):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\programming\cpp\Techies\Techies\techies.cpp(196,3):
+          выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<int,int>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=double,
+              _Other2=double
+          ]
+              C:\programming\cpp\Techies\Techies\techies.cpp(193,15):
+              см. первую ссылку на std::pair<int,int>::pair "Techies::Techies"
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244: инициализация: преобразование "_Ty" в "_Ty2", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:             _Ty=double
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:             _Ty2=int
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         ]
+  (компиляция исходного файла "techies.cpp")
+  
+  Создание кода...
+x64\Debug\techiesObjects.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl Button::Button(struct std::pair<float,float>,struct std::pair<int,int>,struct std::pair<int,int>,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class Log &)" (??0Button@@QEAA@U?$pair@MM@std@@U?$pair@HH@2@1V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@AEAVLog@@@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl TimerObject::reset(void)" (?reset@TimerObject@@QEAAXXZ) в функции "private: void __cdecl Techies::restart(void)" (?restart@Techies@@AEAAXXZ).
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl TimerObject::start(void)" (?start@TimerObject@@QEAAXXZ) в функции "public: virtual void __cdecl Techies::start(void)" (?start@Techies@@UEAAXXZ).
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl TimerObject::stop(void)" (?stop@TimerObject@@QEAAXXZ) в функции "private: void __cdecl Techies::restart(void)" (?restart@Techies@@AEAAXXZ).
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl TimerObject::TimerObject(struct std::pair<float,float>,struct std::pair<int,int>,struct std::pair<int,int>,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0TimerObject@@QEAA@U?$pair@MM@std@@U?$pair@HH@2@1V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl MinesCounterObject::set_mines(unsigned int)" (?set_mines@MinesCounterObject@@QEAAXI@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl MinesCounterObject::reset(void)" (?reset@MinesCounterObject@@QEAAXXZ) в функции "private: void __cdecl Techies::restart(void)" (?restart@Techies@@AEAAXXZ).
+techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl MinesCounterObject::MinesCounterObject(struct std::pair<float,float>,struct std::pair<int,int>,struct std::pair<int,int>,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0MinesCounterObject@@QEAA@U?$pair@MM@std@@U?$pair@HH@2@1V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
+C:\programming\cpp\Techies\x64\Debug\Techies.exe : fatal error LNK1120: неразрешенных внешних элементов: 8

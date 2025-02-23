@@ -44,6 +44,8 @@ void Techies::restart()
 
 void Techies::start()
 {
+	window = new sf::RenderWindow(sf::VideoMode(window_width, window_height), name);
+
     while (window->isOpen())
     {
         sf::Event event;
@@ -54,7 +56,7 @@ void Techies::start()
             if (event.type == sf::Event::MouseButtonReleased) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
 					for (int i = 0; i < tmp_buttons.size(); ++i) {
-						if (tmp_buttons[i]->click(*window)) {
+						if (tmp_buttons[i]->click(sf::Mouse::getPosition(*window))) {
 							difficulty = 1 + i;
 							restart();
 							goto skip;
@@ -66,7 +68,7 @@ void Techies::start()
 					}
 					tmp_objects.clear();
 					tmp_buttons.clear();
-					if (difficulty_button->click(*window)) {
+					if (difficulty_button->click(sf::Mouse::getPosition(*window))) {
 						restart();
 					}
 					else{
@@ -105,22 +107,32 @@ void Techies::start()
 					}
 					tmp_objects.clear();
 					tmp_buttons.clear();
-					if (difficulty_button->click(*window)) {
+					if (difficulty_button->click(sf::Mouse::getPosition(*window))) {
 
 						sf::FloatRect button_pos = difficulty_button->get_collision();
 						
-						ClickableObject* tmp_choise_1 = new ClickableObject(difficulty_button->get_pos(), { 200,75 }, difficulty_button->get_scale(), difficulty_button->get_texture()),
-							* tmp_choise_2 = new ClickableObject(
+						Button* tmp_choise_1 = new Button(
+							difficulty_button->get_pos(),
+							{ 200,75 },
+							difficulty_button->get_scale(),
+							difficulty_button->get_texture(),
+							log
+						),
+
+							* tmp_choise_2 = new Button(
 								{ button_pos.left,button_pos.top + difficulty_button->get_scale().second},
 								{ 200,75 },
 								difficulty_button->get_scale(),
-								difficulty_button->get_texture()
+								difficulty_button->get_texture(),
+								log
 							),
-							* tmp_choise_3 = new ClickableObject(
+
+							* tmp_choise_3 = new Button(
 								{ button_pos.left,button_pos.top + difficulty_button->get_scale().second * 2 },
 								{ 200,75 },
 								difficulty_button->get_scale(),
-								difficulty_button->get_texture()
+								difficulty_button->get_texture(),
+								log
 							);
 
 						tmp_choise_1->set_texture_rect({ 0,0,200,75 });
@@ -169,7 +181,6 @@ Techies::Techies(unsigned int height)
 	window_height = height;
 	window_width = height * 0.86;
 
-	window = new sf::RenderWindow(sf::VideoMode(window_width, window_height),name);
 	field = new Field({ window_width * 0.05,window_height*0.185}, window_width * 0.9, "defolt.png", difficulty);
 
 
@@ -185,11 +196,12 @@ Techies::Techies(unsigned int height)
 		{ (window_width * 0.27),(window_height * 0.16) },
 		"counters/defolt.png");
 
-	difficulty_button = new ClickableObject(
+	difficulty_button = new Button(
 		{ (window_width /2 - window_width * 0.16), (window_height * 0.015) },
 		{ 200,75},
 		{(window_width*0.32),(window_height* 0.16)},
-		"difficulty/defolt.png");
+		"difficulty/defolt.png",
+		log);
 
 	timer = new TimerObject(
 		{(window_width - window_width*0.05 - window_width * 0.27),(window_height * 0.015)},

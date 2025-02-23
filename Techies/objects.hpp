@@ -3,6 +3,12 @@
 #define SFML_GRAPHICS
 #endif // !SFML_GRAPHICS
 
+
+#ifndef LOG
+#include"log.hpp"
+#define LOG
+#endif // !LOG
+
 class Object {
 
 protected:
@@ -50,7 +56,7 @@ public:
 	void draw(sf::RenderWindow& window);
 
 	Object(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file);
-	
+
 
 
 
@@ -59,12 +65,15 @@ public:
 
 class ClickableObject : public Object {
 
+protected:
+
+	Log& log;
 
 public:
+	virtual bool click(sf::Vector2i mouse_pos);
 
-	bool click(sf::RenderWindow& window);
 
-	ClickableObject(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file);
+	ClickableObject(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file, Log& log);
 };
 
 
@@ -74,7 +83,7 @@ class CounterObject : public Object {
 
 protected:
 
-	sf::Sprite left_cell, middle_cell,right_cell;
+	sf::Sprite left_cell, middle_cell, right_cell;
 
 
 public:
@@ -104,62 +113,3 @@ public:
 
 };
 
-
-class TimerObject : public CounterObject {
-
-private:
-	bool run = false;
-	unsigned int seconds = 0,extra_time = 0;
-
-	sf::Clock timer;
-	
-
-public:
-
-	//Setters
-	void set_seconds(unsigned int extra_time);
-	
-	//Getters
-	unsigned int get_seconds() const;
-	
-	
-	//Tech & Other
-	void reset();
-	void start();
-	void stop();
-	void update();
-	
-	TimerObject (std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file);
-	TimerObject (std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file,unsigned int extra_time);
-};
-
-
-
-
-class MinesCounterObject: public CounterObject {
-private:
-
-	int mines = 0;
-	bool mine_change = false;
-
-public:
-	
-	
-	//Setters
-
-	void set_mines(unsigned int count);
-
-	//Getters
-	int get_mines() const;
-
-	//Tech
-	void add_mine();
-	void remove_mine();
-	void reset();
-	void update();
-
-
-	MinesCounterObject(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file);
-	MinesCounterObject(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file,unsigned int mines);
-
-};

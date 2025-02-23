@@ -27,22 +27,27 @@
 #define GAME
 #endif // !GAME
 
+#ifndef TECHIESOBJECTS
+#include "techiesObjects.hpp"
+#define TECHIESOBJECTS
+#endif // !TECHIESOBJECTS
 
 
-class Techies: Game{
+class Techies: public Game{
 
 
 private:
+	Log log;
 	int difficulty = 1;
 	bool end = false,run = false;
 	std::string name = "Techies";
 	Field* field;
 	TimerObject* timer;
 	MinesCounterObject* mine_counter;
-	ClickableObject *difficulty_button;
+	Button *difficulty_button;
 
 	std::vector<Object*> tmp_objects;
-	std::vector<ClickableObject*> tmp_buttons;
+	std::vector<Button*> tmp_buttons;
 	void draw();
 
 	void restart();

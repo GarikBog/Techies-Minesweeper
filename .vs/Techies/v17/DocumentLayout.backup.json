@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\programming\\cpp\\Techies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_cell.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_cell.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_field.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_field.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\techies.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\techies.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\techies.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\techies.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\objects.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,12 +19,36 @@
       "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\objects.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\techies.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\techies.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\techiesObjects.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\techiesObjects.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\TechiesObjects.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\TechiesObjects.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_cell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_cell.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_cell.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\mine_field.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|solutionrelative:Techies\\mine_field.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2ABDC05B-53D4-4C09-A9CC-181267B24D54}|Techies\\Techies.vcxproj|C:\\programming\\cpp\\Techies\\Techies\\game.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -70,11 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "field.cpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\field.cpp",
               "RelativeDocumentMoniker": "Techies\\field.cpp",
@@ -87,28 +99,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "techies.hpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\techies.hpp",
               "RelativeDocumentMoniker": "Techies\\techies.hpp",
               "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\techies.hpp",
               "RelativeToolTip": "Techies\\techies.hpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-21T15:49:04.153Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "mine_cell.hpp",
-              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.hpp",
-              "RelativeDocumentMoniker": "Techies\\mine_cell.hpp",
-              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.hpp",
-              "RelativeToolTip": "Techies\\mine_cell.hpp",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAADYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-14T13:39:57.598Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -133,46 +133,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "mine_field.hpp",
-              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\mine_field.hpp",
-              "RelativeDocumentMoniker": "Techies\\mine_field.hpp",
-              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\mine_field.hpp",
-              "RelativeToolTip": "Techies\\mine_field.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-14T13:40:29.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "objects.cpp",
-              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\objects.cpp",
-              "RelativeDocumentMoniker": "Techies\\objects.cpp",
-              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\objects.cpp",
-              "RelativeToolTip": "Techies\\objects.cpp",
-              "ViewState": "AgIAALIBAAAAAAAAAAAewIYBAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-22T13:11:03.943Z",
-              "EditorCaption": ""
+              "Title": "techiesObjects.hpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\techiesObjects.hpp",
+              "RelativeDocumentMoniker": "Techies\\techiesObjects.hpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\techiesObjects.hpp",
+              "RelativeToolTip": "Techies\\techiesObjects.hpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAuwCYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-22T13:50:38.546Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "techies.cpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\techies.cpp",
               "RelativeDocumentMoniker": "Techies\\techies.cpp",
               "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\techies.cpp",
               "RelativeToolTip": "Techies\\techies.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADYAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-24T14:45:48.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "objects.cpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\objects.cpp",
+              "RelativeDocumentMoniker": "Techies\\objects.cpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\objects.cpp",
+              "RelativeToolTip": "Techies\\objects.cpp",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAALoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-22T13:11:03.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "objects.hpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\objects.hpp",
+              "RelativeDocumentMoniker": "Techies\\objects.hpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\objects.hpp",
+              "RelativeToolTip": "Techies\\objects.hpp",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-21T15:24:59.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "techiesObjects.cpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\techiesObjects.cpp",
+              "RelativeDocumentMoniker": "Techies\\techiesObjects.cpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\techiesObjects.cpp",
+              "RelativeToolTip": "Techies\\techiesObjects.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAIYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-22T13:56:46.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "mine_field.cpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\mine_field.cpp",
               "RelativeDocumentMoniker": "Techies\\mine_field.cpp",
@@ -180,50 +203,71 @@
               "RelativeToolTip": "Techies\\mine_field.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-14T13:41:38.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T13:41:38.904Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "mine_cell.cpp",
-              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.cpp",
-              "RelativeDocumentMoniker": "Techies\\mine_cell.cpp",
-              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.cpp",
-              "RelativeToolTip": "Techies\\mine_cell.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-14T13:42:37.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "objects.hpp",
-              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\objects.hpp",
-              "RelativeDocumentMoniker": "Techies\\objects.hpp",
-              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\objects.hpp",
-              "RelativeToolTip": "Techies\\objects.hpp",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAAIAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-21T15:24:59.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "game.cpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\game.cpp",
               "RelativeDocumentMoniker": "Techies\\game.cpp",
               "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\game.cpp",
               "RelativeToolTip": "Techies\\game.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-10T15:31:02.337Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "log.cpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\log.cpp",
+              "RelativeDocumentMoniker": "Techies\\log.cpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\log.cpp",
+              "RelativeToolTip": "Techies\\log.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-22T13:49:35.94Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "mine_cell.cpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.cpp",
+              "RelativeDocumentMoniker": "Techies\\mine_cell.cpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.cpp",
+              "RelativeToolTip": "Techies\\mine_cell.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-14T13:42:37.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "mine_cell.hpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.hpp",
+              "RelativeDocumentMoniker": "Techies\\mine_cell.hpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\mine_cell.hpp",
+              "RelativeToolTip": "Techies\\mine_cell.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-14T13:39:57.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "mine_field.hpp",
+              "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\mine_field.hpp",
+              "RelativeDocumentMoniker": "Techies\\mine_field.hpp",
+              "ToolTip": "C:\\programming\\cpp\\Techies\\Techies\\mine_field.hpp",
+              "RelativeToolTip": "Techies\\mine_field.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-14T13:40:29.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "game.hpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\game.hpp",
               "RelativeDocumentMoniker": "Techies\\game.hpp",
@@ -235,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "cell.cpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\cell.cpp",
               "RelativeDocumentMoniker": "Techies\\cell.cpp",
@@ -247,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "field.hpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\field.hpp",
               "RelativeDocumentMoniker": "Techies\\field.hpp",
@@ -259,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "cell.hpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\cell.hpp",
               "RelativeDocumentMoniker": "Techies\\cell.hpp",
@@ -271,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\programming\\cpp\\Techies\\Techies\\main.cpp",
               "RelativeDocumentMoniker": "Techies\\main.cpp",

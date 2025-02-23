@@ -131,14 +131,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="log.cpp" />
     <ClCompile Include="mine_cell.cpp" />
     <ClCompile Include="mine_field.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="techies.cpp" />
+    <ClCompile Include="techiesObjects.cpp" />
+    <ClCompile Include="techiesObjects.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="log.hpp" />
     <ClInclude Include="mine_cell.hpp" />
     <ClInclude Include="mine_field.hpp" />
     <ClInclude Include="game.hpp" />
