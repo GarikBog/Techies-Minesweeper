@@ -1,4 +1,20 @@
-﻿  main.cpp
+﻿  log.cpp
+  mine_cell.cpp
+C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244: return: преобразование "T" в "int", возможна потеря данных
+C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:         with
+C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:         [
+C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:             T=float
+C:\programming\cpp\Techies\Techies\mine_cell.cpp(82,32): warning C4244:         ]
+C:\programming\cpp\Techies\Techies\mine_cell.cpp(139,12): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  mine_field.cpp
+C:\programming\cpp\Techies\Techies\mine_field.cpp(210,8): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\programming\cpp\Techies\Techies\mine_field.cpp(211,5): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\programming\cpp\Techies\Techies\mine_field.cpp(294,49): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\programming\cpp\Techies\Techies\mine_field.cpp(297,44): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\programming\cpp\Techies\Techies\mine_field.cpp(308,26): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  game.cpp
+  main.cpp
+  objects.cpp
   techies.cpp
 C:\programming\cpp\Techies\Techies\techies.cpp(182,24): warning C4244: =: преобразование "double" в "unsigned int", возможна потеря данных
 C:\programming\cpp\Techies\Techies\techies.cpp(184,77): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
@@ -101,14 +117,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.3
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.42.34433\include\utility(263,54): warning C4244:         ]
   (компиляция исходного файла "techies.cpp")
   
+  techiesObjects.cpp
+  techiesObjects.hpp
   Создание кода...
 x64\Debug\techiesObjects.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl Button::Button(struct std::pair<float,float>,struct std::pair<int,int>,struct std::pair<int,int>,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class Log &)" (??0Button@@QEAA@U?$pair@MM@std@@U?$pair@HH@2@1V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@AEAVLog@@@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl TimerObject::reset(void)" (?reset@TimerObject@@QEAAXXZ) в функции "private: void __cdecl Techies::restart(void)" (?restart@Techies@@AEAAXXZ).
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl TimerObject::start(void)" (?start@TimerObject@@QEAAXXZ) в функции "public: virtual void __cdecl Techies::start(void)" (?start@Techies@@UEAAXXZ).
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl TimerObject::stop(void)" (?stop@TimerObject@@QEAAXXZ) в функции "private: void __cdecl Techies::restart(void)" (?restart@Techies@@AEAAXXZ).
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl TimerObject::TimerObject(struct std::pair<float,float>,struct std::pair<int,int>,struct std::pair<int,int>,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0TimerObject@@QEAA@U?$pair@MM@std@@U?$pair@HH@2@1V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl MinesCounterObject::set_mines(unsigned int)" (?set_mines@MinesCounterObject@@QEAAXI@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl MinesCounterObject::reset(void)" (?reset@MinesCounterObject@@QEAAXXZ) в функции "private: void __cdecl Techies::restart(void)" (?restart@Techies@@AEAAXXZ).
-techies.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl MinesCounterObject::MinesCounterObject(struct std::pair<float,float>,struct std::pair<int,int>,struct std::pair<int,int>,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0MinesCounterObject@@QEAA@U?$pair@MM@std@@U?$pair@HH@2@1V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z) в функции "public: __cdecl Techies::Techies(unsigned int)" (??0Techies@@QEAA@I@Z).
-C:\programming\cpp\Techies\x64\Debug\Techies.exe : fatal error LNK1120: неразрешенных внешних элементов: 8
+  Techies.vcxproj -> C:\programming\cpp\Techies\x64\Debug\Techies.exe

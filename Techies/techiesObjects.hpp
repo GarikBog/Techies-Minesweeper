@@ -75,7 +75,7 @@ public:
 	void add_mine();
 	void remove_mine();
 	void reset();
-	void update();
+	void update() override;
 
 
 	MinesCounterObject(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file);

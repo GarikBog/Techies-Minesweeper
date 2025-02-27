@@ -54,7 +54,7 @@ void Object::set_scale(std::pair<int, int> size)
 
 	sprite.setScale({
 		width / sprite.getLocalBounds().width,
-		height / sprite.getLocalBounds().height });
+		height / sprite.getLocalBounds().height});
 }
 
 void Object::set_scale(int width, int height)
@@ -64,7 +64,7 @@ void Object::set_scale(int width, int height)
 
 	sprite.setScale({
 		width / sprite.getLocalBounds().width,
-		height / sprite.getLocalBounds().height });
+		height / sprite.getLocalBounds().height});
 }
 
 void Object::set_width(int width)
@@ -73,7 +73,7 @@ void Object::set_width(int width)
 
 	sprite.setScale({
 		width / sprite.getLocalBounds().width,
-		height / sprite.getLocalBounds().height });
+		height / sprite.getLocalBounds().height});
 }
 
 void Object::set_height(int height)
@@ -83,17 +83,17 @@ void Object::set_height(int height)
 	std::cout << sprite.getLocalBounds().width << ' ' << sprite.getLocalBounds().height;
 	sprite.setScale({
 		width / sprite.getLocalBounds().width,
-		height / sprite.getLocalBounds().height });
+		height / sprite.getLocalBounds().height});
 }
 
 void Object::set_texture(std::string texture_file)
-{
+{	
 	this->texture_file = texture_file;
 	if (!texture.loadFromFile("textures/objects/" + texture_file)) {
 		texture.loadFromFile("textures/tech/error.jpg");
 		this->texture_file = "textures/tech/error.jpg";
 	}
-
+	
 	sprite.setTexture(texture);
 }
 
@@ -110,7 +110,7 @@ std::string Object::get_texture() const
 
 std::pair<float, float> Object::get_pos() const
 {
-	return { x,y };
+	return {x,y};
 }
 
 float Object::get_x() const
@@ -130,7 +130,7 @@ sf::FloatRect Object::get_collision() const
 
 std::pair<int, int> Object::get_scale() const
 {
-	return { width,height };
+	return {width,height};
 }
 
 int Object::get_width() const
@@ -149,7 +149,7 @@ void Object::draw(sf::RenderWindow& window)
 
 }
 
-Object::Object(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file)
+Object::Object(std::pair<float, float> pos,std::pair<int,int> size, std::pair<int, int> scale, std::string texture_file)
 {
 	set_pos(pos);
 	set_texture_rect({ 0,0,size.first,size.second });
@@ -165,6 +165,11 @@ Object::Object(std::pair<float, float> pos, std::pair<int, int> size, std::pair<
 //ClickableObject
 bool ClickableObject::click(sf::Vector2i mouse_pos)
 {
+	//std::cout << "\n\tMOUSE_POS\n" << "\t " << mouse_pos.x<<' '<<mouse_pos.y;
+	//std::cout << "\nX: " << x;
+	//std::cout << "\nW: " << x + sprite.getGlobalBounds().width;
+	//std::cout << "\nY: " << y;
+	//std::cout << "\nH: " << y + sprite.getGlobalBounds().height;
 
 	return (
 		mouse_pos.x > x &&
@@ -174,13 +179,14 @@ bool ClickableObject::click(sf::Vector2i mouse_pos)
 		);
 }
 
-ClickableObject::ClickableObject(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file, Log& log) :
-	Object(pos, size, scale, texture_file),
+ClickableObject::ClickableObject(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file,Log& log): 
+	Object(pos,size,scale,texture_file),
 	log(log)
 {
-
+	
 }
 //ClickableObject
+
 
 
 
@@ -368,3 +374,82 @@ CounterObject::CounterObject(std::pair<float, float> pos, std::pair<int, int> si
 
 //CounterObject
 
+// CLOSE button
+bool CloseButton::click(sf::Vector2i mouse_pos)
+{
+	if (!ClickableObject::click(mouse_pos)) return false;
+
+	log.add({ "CLOSE" });
+
+	return true;
+}
+
+
+CloseButton::CloseButton(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file, Log& log):
+	ClickableObject(pos,size,scale,texture_file,log)
+{
+
+}
+// Close button
+
+
+void Base_counter::set_score(unsigned int count)
+{
+	score = count;
+	score_change = true;
+}
+
+int Base_counter::get_score() const
+{
+	return score;
+}
+
+void Base_counter::add_point()
+{
+	++score;
+	score_change = true;
+
+}
+
+void Base_counter::remove_point()
+{
+
+	--score;
+	score_change = true;
+
+
+
+}
+
+void Base_counter::reset()
+{
+	score = 0;
+	right_cell.setTextureRect({ 60 ,0,20,35 });
+	middle_cell.setTextureRect({ 60 ,0,20,35 });
+	left_cell.setTextureRect({ 60 ,0,20,35 });
+}
+
+void Base_counter::update()
+{
+
+	if (score > 998 || !score_change || score < 0) return;
+	//std::cout << point_change << '\t' << "CHANGE!\n";
+	score_change = false;
+
+	right_cell.setTextureRect({ 60 + (score % 10) * 20,0,20,35 });
+
+	if (score < 9) return;
+
+	middle_cell.setTextureRect({ 60 + ((score / 10) % 10) * 20,0,20,35 });
+
+	if (score < 99) return;
+
+	left_cell.setTextureRect({ 60 + ((score / 100) % 10) * 20,0,20,35 });
+
+
+}
+
+Base_counter::Base_counter(std::pair<float, float> pos, std::pair<int, int> size, std::pair<int, int> scale, std::string texture_file) :
+	CounterObject(pos, size, scale, texture_file)
+{
+}
